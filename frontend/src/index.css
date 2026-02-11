@@ -1,0 +1,327 @@
+/* ---------------- GLOBAL RESET ---------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------------- APP CONTAINER ---------------- */
+
+.app {
+  width: 95%;
+  max-width: 1200px;   /* IMPORTANT */
+  padding: 30px;
+}
+
+/* ---------------- HEADER ---------------- */
+/* ----------- GLOBAL BACKGROUND ----------- */
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  color: white;
+}
+
+.app {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ----------- HERO SECTION ----------- */
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+/* ----------- SEARCH CONTAINER (GLASS EFFECT) ----------- */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 650px;
+  padding: 12px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ----------- INPUT ----------- */
+
+.search-bar input {
+  flex: 1;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  transition: 0.3s ease;
+}
+
+.search-bar input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.35);
+}
+
+/* ----------- BUTTON ----------- */
+
+.search-bar button {
+  padding: 16px 26px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  background: #111827;
+  color: white;
+  transition: all 0.25s ease;
+}
+
+.search-bar button:hover {
+  background: black;
+  transform: translateY(-3px);
+}
+
+.search-bar button:disabled {
+  background: #777;
+  cursor: not-allowed;
+}
+
+/* ----------- ANIMATION ----------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------- RESPONSIVE ----------- */
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar button {
+    width: 100%;
+  }
+}
+/* ---------------- WEATHER CARD ---------------- */
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 25px;
+  color: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+.weather-card h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.weather-card .temp {
+  font-size: 56px;
+  font-weight: bold;
+  margin: 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.weather-card i {
+  font-size: 40px;
+  color: #facc15;
+}
+
+.weather-card .condition {
+  opacity: 0.9;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.weather-card .details {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 18px 0;
+    font-size: 10px;
+    opacity: 0.9;
+}
+
+.updated {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* ---------------- FORECAST SECTION ---------------- */
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.forecast-card {
+  width: 100%;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.forecast-day {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.forecast-icon {
+  font-size: 30px;
+  margin: 10px 0;
+  color: #e0e7ff;
+}
+/* ---------------- STATES ---------------- */
+
+.loading,
+.error {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+.error {
+  color: #ffb4b4;
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 900px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .forecast {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .weather-card .details {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+/* ---------------- MAIN 2-COLUMN LAYOUT ---------------- */
+
+/* ===== NEW PERFECT LAYOUT ===== */
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Top row: Weather + Chart */
+.top-row {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* Make both take proper space */
+.top-row > * {
+  flex: 1;
+}
+
+/* Bottom row: Forecast cards full width */
+.bottom-row {
+  width: 100%;
+}
+/* Chart styling */
+.chart-title {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: #e0e7ff;
+}
+
